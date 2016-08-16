@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <f:metadata>
+        <f:viewParam name="menu" value="#{teaBean.selectedColor}"/>
+        <f:viewParam name="teaname" value="#{teaBean.selectedTea}"/>
+    </f:metadata>
+
+    <h:body>
+        <ui:composition template="/templates/masterpage.xhtml">
+            <ui:define name="windowTitle">
+                Welcome To Site. 
+            </ui:define> 
+
+            <ui:define name="content">
+                You are in 
+                #{teaBean.selectedColor} >> 
+                #{teaBean.selectedTea}
+                <hr/>
+            </ui:define>       
+        </ui:composition>
+    </h:body>
+</html>
+
